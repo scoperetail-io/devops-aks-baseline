@@ -26,27 +26,15 @@ param clusterAuthorizedIPRanges array = []
 
 @description('AKS Service, Node Pool, and supporting services (KeyVault, App Gateway, etc) region. This needs to be the same region as the vnet provided in these parameters.')
 @allowed([
-  'australiaeast'
-  'canadacentral'
   'centralus'
   'eastus'
   'eastus2'
-  'westus2'
-  'francecentral'
-  'germanywestcentral'
-  'northeurope'
-  'southafricanorth'
-  'southcentralus'
-  'uksouth'
-  'westeurope'
-  'japaneast'
-  'southeastasia'
 ])
 param location string = 'eastus2'
 param kubernetesVersion string = '1.25.5'
 
 @description('Domain name to use for App Gateway and AKS ingress.')
-param domainName string = 'contoso.com'
+param domainName string = 'scoperetail.com'
 
 @description('Your cluster will be bootstrapped from this git repo.')
 @minLength(9)

@@ -7,7 +7,7 @@ Now that you have the [prerequisites](./01-prerequisites.md) met, follow the ste
 1. Set a variable for the domain that will be used in the rest of this deployment.
 
    ```bash
-   export DOMAIN_NAME_AKS_BASELINE="contoso.com"
+   export DOMAIN_NAME_AKS_BASELINE="scoperetail.com"
    ```
 
 1. Generate a client-facing, self-signed TLS certificate.

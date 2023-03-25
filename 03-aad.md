@@ -41,7 +41,7 @@ This does not configure anything related to workload identity. This configuratio
 
    If you already have a security group that is appropriate for your cluster's admin service accounts, use that group and don't create a new one. If using your own group or your Azure AD administrator created one for you to use; you will need to update the group name and ID throughout the reference implementation.
    ```bash
-   export AADOBJECTID_GROUP_CLUSTERADMIN_AKS_BASELINE=[Paste your existing cluster admin group Object ID here.]
+   export AADOBJECTID_GROUP_CLUSTERADMIN_AKS_BASELINE=20690abe-a11f-4571-ab1d-d9ce4c332e28
    echo AADOBJECTID_GROUP_CLUSTERADMIN_AKS_BASELINE: $AADOBJECTID_GROUP_CLUSTERADMIN_AKS_BASELINE
    ```
 
