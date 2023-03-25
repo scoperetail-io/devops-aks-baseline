@@ -4,3 +4,5 @@
 *.pfx
 *.pem
 aks_baseline.env
+.idea
+.DS_Store
