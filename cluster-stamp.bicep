@@ -46,12 +46,12 @@ param gitOpsBootstrappingRepoBranch string = 'main'
 
 /*** VARIABLES ***/
 
-var subRgUniqueString = sdav
+var subRgUniqueString = uniqueString('aks', subscription().subscriptionId, resourceGroup().id)
 var clusterName = 'aks-${subRgUniqueString}'
 var agwName = 'apw-${clusterName}'
 
 var aksIngressDomainName = 'aks-ingress.${domainName}'
-var aksBackendDomainName = 'sdav-00.${aksIngressDomainName}'
+var aksBackendDomainName = 'sdav00-00.${aksIngressDomainName}'
 var isUsingAzureRBACasKubernetesRBAC = (subscription().tenantId == k8sControlPlaneAuthorizationTenantId)
 
 /*** EXISTING TENANT RESOURCES ***/
