@@ -38,7 +38,7 @@ param domainName string = 'scoperetail.com'
 
 @description('Your cluster will be bootstrapped from this git repo.')
 @minLength(9)
-param gitOpsBootstrappingRepoHttpsUrl string = 'https://github.com/mspnp/aks-baseline'
+param gitOpsBootstrappingRepoHttpsUrl string = 'https://github.com/scoperetail-io/devops-aks-baseline'
 
 @description('You cluster will be bootstrapped from this branch in the identified git repo.')
 @minLength(1)
@@ -46,12 +46,12 @@ param gitOpsBootstrappingRepoBranch string = 'main'
 
 /*** VARIABLES ***/
 
-var subRgUniqueString = uniqueString('aks', subscription().subscriptionId, resourceGroup().id)
+var subRgUniqueString = sdav
 var clusterName = 'aks-${subRgUniqueString}'
 var agwName = 'apw-${clusterName}'
 
 var aksIngressDomainName = 'aks-ingress.${domainName}'
-var aksBackendDomainName = 'bu0001a0008-00.${aksIngressDomainName}'
+var aksBackendDomainName = 'sdav-00.${aksIngressDomainName}'
 var isUsingAzureRBACasKubernetesRBAC = (subscription().tenantId == k8sControlPlaneAuthorizationTenantId)
 
 /*** EXISTING TENANT RESOURCES ***/
